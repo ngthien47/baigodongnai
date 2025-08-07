@@ -1,0 +1,445 @@
+@import url("https://fontmeme.com/fonts/stand-alone-mjtype-font/");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Netflix Font", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  background: #000000;
+}
+
+header {
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 650px; /* CHANGE: Changed from fixed height to min-height for flexibility */
+  border-bottom: 0.8rem solid #222222;
+  display: flex; /* ADD: Better vertical alignment */
+  flex-direction: column;
+}
+
+header .bg_shadow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav {
+  padding: 1.75rem 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav ul li .logo {
+  width: 15rem;
+}
+
+header .header_content {
+  flex-grow: 1; /* CHANGE: Removed fixed height, allows content to fill space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header .header_content h1 {
+  color: white;
+  font-size: 5.5rem;
+  font-weight: bold;
+}
+
+header .header_content h3 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 2rem 0;
+}
+
+header .header_content h4 {
+  color: white;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+header .header_content .email_sec {
+  margin: 2rem 0;
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+  justify-content: center;
+}
+
+header .header_content .email_sec input {
+  background-color: #1f1919;
+  border: 1px solid grey;
+  color: lightgrey;
+  padding: 1.6rem;
+  outline: none;
+  border-radius: 0.45rem;
+  width: 100%; /* CHANGE: Make input responsive */
+  max-width: 34rem; /* CHANGE: Set a max-width */
+}
+
+header .header_content .email_sec .contact_btn {
+  background-color: #e50913;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  border-radius: 0.45rem;
+  transition: 0.2s;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+header .header_content .email_sec .contact_btn i {
+  margin-left: 1.2rem;
+}
+
+header .header_content .email_sec .contact_btn:hover {
+  background-color: #c50b14;
+}
+
+header .header_content .email_sec input::placeholder {
+  color: lightgrey;
+}
+
+section {
+  margin: 0 auto;
+  border-bottom: 0.8rem solid #222222;
+}
+
+section h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#featuredWoods {
+  padding: 40px 20px;
+}
+
+.slider_container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.wood_list {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+}
+
+.wood_item {
+  min-width: calc(25% - 15px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.wood_item img {
+  width: 100%;
+  height: 450px; /* CHANGE: Reduced height for better proportions */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.wood_item h2 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.slider_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(80, 80, 80, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.slider_btn:hover {
+  background: rgba(229, 9, 19, 0.9);
+}
+
+.slider_btn.prev {
+  left: 10px;
+}
+
+.slider_btn.next {
+  right: 10px;
+}
+
+#priceList {
+  padding: 40px 20px;
+}
+
+#priceList h1 {
+  text-align: left;
+}
+
+.price_tables_container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.price_table {
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.price_table img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.price_table h2 {
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.price_details .price_header,
+.price_details .price_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+  font-size: 1.6rem;
+}
+
+.price_details .price_header {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+}
+
+.price_details .price_row:last-child {
+  border-bottom: none;
+}
+
+.sawing_price {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  padding: 15px 10px;
+  border-top: 2px solid #e50913;
+}
+
+#linkFacebook {
+  text-align: center;
+}
+
+#fbWrapper {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#fbWrapper iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.footer_logo {
+  width: 128px;
+  height: 128px;
+  border-radius: 5px;
+}
+
+.footer_content p {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.footer_details {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.map_iframe {
+  border-radius: 5px;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 1200px) {
+  .wood_item {
+    min-width: calc(33.333% - 14px); /* 3 items */
+  }
+}
+
+@media (max-width: 992px) {
+  header .header_content h1 {
+    font-size: 4rem;
+  }
+
+  header .header_content h3 {
+    font-size: 2rem;
+  }
+
+  .wood_item {
+    min-width: calc(50% - 10px); /* 2 items */
+  }
+
+  .wood_item img {
+    height: 400px; /* Adjust height */
+  }
+
+  .footer_header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .map_iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer_logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .footer_content p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li .logo {
+    width: 12rem;
+  }
+
+  header {
+    min-height: 550px;
+  }
+  
+  header .header_content .email_sec {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+
+  .wood_item {
+    min-width: calc(100% - 10px); /* 1 item */
+  }
+
+  .wood_item img {
+    height: 350px; /* Adjust height */
+  }
+
+  .slider_btn {
+    padding: 8px 10px;
+  }
+
+  section h1, #priceList h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header .header_content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  header .header_content h3 {
+    font-size: 1.8rem;
+  }
+
+  header .header_content .email_sec .contact_btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 1.8rem;
+  }
+
+  .wood_item img {
+    height: 300px; /* Adjust height */
+  }
+
+  .price_table {
+      padding: 15px;
+  }
+
+  .price_details .price_header,
+  .price_details .price_row {
+    font-size: 1.5rem;
+    padding: 10px 5px;
+  }
+}
